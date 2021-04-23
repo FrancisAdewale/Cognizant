@@ -16,6 +16,7 @@
 		76D0B10C26330249005A0FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D0B10A26330249005A0FBD /* LaunchScreen.storyboard */; };
 		76D0B11726330249005A0FBD /* CognizantAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B11626330249005A0FBD /* CognizantAssignmentTests.swift */; };
 		76D0B12226330249005A0FBD /* CognizantAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B12126330249005A0FBD /* CognizantAssignmentUITests.swift */; };
+		76D0B1572633261B005A0FBD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B1562633261B005A0FBD /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		76D0B11D26330249005A0FBD /* CognizantAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CognizantAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D0B12126330249005A0FBD /* CognizantAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognizantAssignmentUITests.swift; sourceTree = "<group>"; };
 		76D0B12326330249005A0FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76D0B1562633261B005A0FBD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				76D0B10026330244005A0FBD /* HomeViewController.swift */,
+				76D0B1562633261B005A0FBD /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D0B10726330244005A0FBD /* CognizantAssignment.xcdatamodeld in Sources */,
+				76D0B1572633261B005A0FBD /* RegisterViewController.swift in Sources */,
 				76D0B10126330244005A0FBD /* HomeViewController.swift in Sources */,
 				76D0B0FD26330244005A0FBD /* AppDelegate.swift in Sources */,
 				76D0B0FF26330244005A0FBD /* SceneDelegate.swift in Sources */,

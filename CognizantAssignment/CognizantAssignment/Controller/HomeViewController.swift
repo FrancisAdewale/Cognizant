@@ -12,21 +12,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpRegisterButton()
         setUpLoginButton()
+        
        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        title = "Home"
 
     }
     
-    fileprivate func setUpRegisterButton() {
+    public func setUpRegisterButton() {
         
         registerButton.setTitle("REGISTER", for: .normal)
         registerButton.frame = CGRect(x: view.center.x, y: view.center.y, width: 180, height: 80)
