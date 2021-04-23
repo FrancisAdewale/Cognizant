@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		76D0B0FD26330244005A0FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B0FC26330244005A0FBD /* AppDelegate.swift */; };
 		76D0B0FF26330244005A0FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B0FE26330244005A0FBD /* SceneDelegate.swift */; };
-		76D0B10126330244005A0FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B10026330244005A0FBD /* ViewController.swift */; };
+		76D0B10126330244005A0FBD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B10026330244005A0FBD /* HomeViewController.swift */; };
 		76D0B10426330244005A0FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D0B10226330244005A0FBD /* Main.storyboard */; };
 		76D0B10726330244005A0FBD /* CognizantAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B10526330244005A0FBD /* CognizantAssignment.xcdatamodeld */; };
 		76D0B10926330249005A0FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D0B10826330249005A0FBD /* Assets.xcassets */; };
@@ -39,7 +39,7 @@
 		76D0B0F926330244005A0FBD /* CognizantAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CognizantAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D0B0FC26330244005A0FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76D0B0FE26330244005A0FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76D0B10026330244005A0FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76D0B10026330244005A0FBD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		76D0B10326330244005A0FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76D0B10626330244005A0FBD /* CognizantAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CognizantAssignment.xcdatamodel; sourceTree = "<group>"; };
 		76D0B10826330249005A0FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,10 +101,11 @@
 		76D0B0FB26330244005A0FBD /* CognizantAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				76D0B1322633068C005A0FBD /* Model */,
+				76D0B13326330696005A0FBD /* View */,
+				76D0B134263306A4005A0FBD /* Controller */,
 				76D0B0FC26330244005A0FBD /* AppDelegate.swift */,
 				76D0B0FE26330244005A0FBD /* SceneDelegate.swift */,
-				76D0B10026330244005A0FBD /* ViewController.swift */,
-				76D0B10226330244005A0FBD /* Main.storyboard */,
 				76D0B10826330249005A0FBD /* Assets.xcassets */,
 				76D0B10A26330249005A0FBD /* LaunchScreen.storyboard */,
 				76D0B10D26330249005A0FBD /* Info.plist */,
@@ -129,6 +130,29 @@
 				76D0B12326330249005A0FBD /* Info.plist */,
 			);
 			path = CognizantAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		76D0B1322633068C005A0FBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76D0B13326330696005A0FBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76D0B10226330244005A0FBD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76D0B134263306A4005A0FBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76D0B10026330244005A0FBD /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D0B10726330244005A0FBD /* CognizantAssignment.xcdatamodeld in Sources */,
-				76D0B10126330244005A0FBD /* ViewController.swift in Sources */,
+				76D0B10126330244005A0FBD /* HomeViewController.swift in Sources */,
 				76D0B0FD26330244005A0FBD /* AppDelegate.swift in Sources */,
 				76D0B0FF26330244005A0FBD /* SceneDelegate.swift in Sources */,
 			);
