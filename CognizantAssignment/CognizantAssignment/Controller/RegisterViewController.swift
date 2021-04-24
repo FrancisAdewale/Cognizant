@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterViewController: UIViewController {
     
+    
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!

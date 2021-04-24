@@ -30,6 +30,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="EU8-fx-tkZ" kind="show" id="D9T-bR-TUm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNe-f9-DHB"/>
@@ -70,13 +73,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="REGISTER">
                                     <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EjS-FO-Qxv"/>
-                        <color key="backgroundColor" red="0.58046871420000001" green="0.78708255289999995" blue="0.83194333310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.35686274509803922" green="0.60784313725490191" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="GNa-2W-8bf">
                         <barButtonItem key="backBarButtonItem" title="Home" id="7KK-4Y-nTt"/>
@@ -111,6 +114,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvK-Vd-8EK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="151.875" y="55.985915492957744"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="X8J-Pb-lUh">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="EU8-fx-tkZ" customClass="LoginViewController" customModule="CognizantAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hi-24-L13">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLz-aH-CFu">
+                                <rect key="frame" x="76" y="168" width="173" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjT-GE-1uj">
+                                <rect key="frame" x="76" y="249" width="173" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kL-2E-65v">
+                                <rect key="frame" x="76" y="342" width="173" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l3h-US-lYx"/>
+                        <color key="backgroundColor" red="0.35686274509999999" green="0.60784313729999995" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="St9-75-f4F">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="pvD-1F-fbm"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginButton" destination="9kL-2E-65v" id="4YR-pg-SUs"/>
+                        <outlet property="passwordField" destination="gjT-GE-1uj" id="1ff-oQ-m5a"/>
+                        <outlet property="usernameField" destination="PLz-aH-CFu" id="Kpq-LP-JVJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFY-rS-n39" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="617"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>

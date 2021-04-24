@@ -16,10 +16,8 @@ class RegisterViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let rootController = loadRootViewController()
-        sut = rootController.stepController
+        sut = storyboard.instantiateViewController(withIdentifier: "Register") as? RegisterViewController
         
-
     }
 
     override func tearDown(){
