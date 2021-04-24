@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
+    
+    
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    private var users: [User] = []
+
 
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
@@ -62,5 +69,32 @@ class LoginViewController: UIViewController {
         view.addSubview(loginButton)
         
     }
+    
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        
+        let fetch = NSFetchRequest<User>(entityName: "User")
+        do {
+            let request  = try context.fetch(fetch)
+            users = request
+        } catch {
+            print("Could not fetch \(error)")
+        }
+        
+       
 
+    }
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        for e in users {
+            if e.password == passwordField.text! && e.username == usernameField.text {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
 }

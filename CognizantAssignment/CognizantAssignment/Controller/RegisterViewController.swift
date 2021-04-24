@@ -12,11 +12,14 @@ class RegisterViewController: UIViewController {
     
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+
 
     
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -68,6 +71,91 @@ class RegisterViewController: UIViewController {
         
     }
     
-
     
+    @IBAction func donePressed(_ sender: UIButton) {
+        
+        let userEntity = User(context: context)
+
+        
+        if let text = usernameField.text {
+            if text.count > 10 {
+                do {
+                    try throwUsernameTooLong()
+                } catch {
+        
+                    print("\(error.localizedDescription) Username Too Long ")
+                    
+                }
+            } else {
+                userEntity.username = text
+
+            }
+            
+
+        }
+        
+        if let passwordText = passwordField.text {
+            if passwordText.count > 15 {
+                
+                do {
+                    try throwPasswordtooLong()
+                } catch {
+        
+                    print("\(error.localizedDescription) Password Too Long")
+                    
+                }
+                
+            } else {
+                userEntity.password = passwordText
+
+            }
+
+        }
+
+        
+    
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let userEntity = User(context: context)
+        
+        guard let username = usernameField.text else { fatalError("username issues")}
+        guard let password = passwordField.text else { fatalError("password issues") }
+        
+        if username.count >= 7 && password.count >= 8 {
+            save()
+
+            return true
+        }
+
+        
+        return false
+    }
+    
+    
+    
+    
+    
+    func throwUsernameTooLong() throws {
+        
+        throw RegisterError.tooLong
+        
+  
+    }
+    
+    func throwPasswordtooLong() throws {
+        
+        throw RegisterError.tooLong
+        
+  
+    }
+    
+    private func save() {
+        do {
+            try context.save()
+        } catch {
+            print("Could not save \(error)")
+        }
+    }
+
 }

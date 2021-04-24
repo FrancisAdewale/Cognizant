@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7698DD7B2634510400F11A9A /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698DD7A2634510400F11A9A /* RegisterTests.swift */; };
 		7698DDA626345D0700F11A9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698DDA526345D0700F11A9A /* LoginViewController.swift */; };
+		76B9319726346AFB0027E8A1 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B9319626346AFB0027E8A1 /* DataTableViewController.swift */; };
 		76D0B0FD26330244005A0FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B0FC26330244005A0FBD /* AppDelegate.swift */; };
 		76D0B0FF26330244005A0FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B0FE26330244005A0FBD /* SceneDelegate.swift */; };
 		76D0B10126330244005A0FBD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B10026330244005A0FBD /* HomeViewController.swift */; };
@@ -20,6 +21,7 @@
 		76D0B1572633261B005A0FBD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B1562633261B005A0FBD /* RegisterViewController.swift */; };
 		76D0B15C263337FF005A0FBD /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B15B263337FF005A0FBD /* RegisterErrors.swift */; };
 		76D0B16D263339C5005A0FBD /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B16C263339C5005A0FBD /* RegisterViewControllerTests.swift */; };
+		76EAA17D2634819B00C34D01 /* X.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA17C2634819B00C34D01 /* X.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* Begin PBXFileReference section */
 		7698DD7A2634510400F11A9A /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTests.swift; sourceTree = "<group>"; };
 		7698DDA526345D0700F11A9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		76B9319626346AFB0027E8A1 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		76D0B0F926330244005A0FBD /* CognizantAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CognizantAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D0B0FC26330244005A0FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76D0B0FE26330244005A0FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +62,8 @@
 		76D0B1562633261B005A0FBD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		76D0B15B263337FF005A0FBD /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		76D0B16C263339C5005A0FBD /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
+		76EAA17B2634810C00C34D01 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		76EAA17C2634819B00C34D01 /* X.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,7 @@
 		76D0B0FB26330244005A0FBD /* CognizantAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				76EAA17B2634810C00C34D01 /* data.json */,
 				76D0B15B263337FF005A0FBD /* RegisterErrors.swift */,
 				76D0B1322633068C005A0FBD /* Model */,
 				76D0B13326330696005A0FBD /* View */,
@@ -153,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				76D0B10526330244005A0FBD /* CognizantAssignment.xcdatamodeld */,
+				76EAA17C2634819B00C34D01 /* X.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 				76D0B10026330244005A0FBD /* HomeViewController.swift */,
 				76D0B1562633261B005A0FBD /* RegisterViewController.swift */,
 				7698DDA526345D0700F11A9A /* LoginViewController.swift */,
+				76B9319626346AFB0027E8A1 /* DataTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,7 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D0B10726330244005A0FBD /* CognizantAssignment.xcdatamodeld in Sources */,
+				76B9319726346AFB0027E8A1 /* DataTableViewController.swift in Sources */,
 				76D0B1572633261B005A0FBD /* RegisterViewController.swift in Sources */,
+				76EAA17D2634819B00C34D01 /* X.swift in Sources */,
 				76D0B10126330244005A0FBD /* HomeViewController.swift in Sources */,
 				76D0B0FD26330244005A0FBD /* AppDelegate.swift in Sources */,
 				7698DDA626345D0700F11A9A /* LoginViewController.swift in Sources */,
