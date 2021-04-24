@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
         setUpRegisterButton()
         setUpLoginButton()
         
-       
     }
     
     override func viewDidLoad() {
@@ -58,6 +57,8 @@ class HomeViewController: UIViewController {
         loginButton.center = CGPoint(x: view.center.x, y: view.center.y + 50)
         view.addSubview(loginButton)
     }
+    
+
     
 
 }

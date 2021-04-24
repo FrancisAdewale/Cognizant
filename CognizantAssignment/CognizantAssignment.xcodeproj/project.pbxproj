@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7698DD7B2634510400F11A9A /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698DD7A2634510400F11A9A /* RegisterTests.swift */; };
+		7698DD8B2634555C00F11A9A /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698DD8A2634555C00F11A9A /* ViewControllers.swift */; };
+		7698DD96263455FF00F11A9A /* RootViewController+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698DD95263455FF00F11A9A /* RootViewController+Tests.swift */; };
 		76D0B0FD26330244005A0FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B0FC26330244005A0FBD /* AppDelegate.swift */; };
 		76D0B0FF26330244005A0FBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B0FE26330244005A0FBD /* SceneDelegate.swift */; };
 		76D0B10126330244005A0FBD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B10026330244005A0FBD /* HomeViewController.swift */; };
@@ -14,9 +17,10 @@
 		76D0B10726330244005A0FBD /* CognizantAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B10526330244005A0FBD /* CognizantAssignment.xcdatamodeld */; };
 		76D0B10926330249005A0FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D0B10826330249005A0FBD /* Assets.xcassets */; };
 		76D0B10C26330249005A0FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D0B10A26330249005A0FBD /* LaunchScreen.storyboard */; };
-		76D0B11726330249005A0FBD /* CognizantAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B11626330249005A0FBD /* CognizantAssignmentTests.swift */; };
 		76D0B12226330249005A0FBD /* CognizantAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B12126330249005A0FBD /* CognizantAssignmentUITests.swift */; };
 		76D0B1572633261B005A0FBD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B1562633261B005A0FBD /* RegisterViewController.swift */; };
+		76D0B15C263337FF005A0FBD /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B15B263337FF005A0FBD /* RegisterErrors.swift */; };
+		76D0B16D263339C5005A0FBD /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B16C263339C5005A0FBD /* RegisterViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7698DD7A2634510400F11A9A /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTests.swift; sourceTree = "<group>"; };
+		7698DD8A2634555C00F11A9A /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
+		7698DD95263455FF00F11A9A /* RootViewController+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootViewController+Tests.swift"; sourceTree = "<group>"; };
 		76D0B0F926330244005A0FBD /* CognizantAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CognizantAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D0B0FC26330244005A0FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76D0B0FE26330244005A0FBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +54,13 @@
 		76D0B10B26330249005A0FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76D0B10D26330249005A0FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D0B11226330249005A0FBD /* CognizantAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CognizantAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		76D0B11626330249005A0FBD /* CognizantAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognizantAssignmentTests.swift; sourceTree = "<group>"; };
 		76D0B11826330249005A0FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D0B11D26330249005A0FBD /* CognizantAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CognizantAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D0B12126330249005A0FBD /* CognizantAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognizantAssignmentUITests.swift; sourceTree = "<group>"; };
 		76D0B12326330249005A0FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D0B1562633261B005A0FBD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		76D0B15B263337FF005A0FBD /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
+		76D0B16C263339C5005A0FBD /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7698DD79263450D200F11A9A /* Extra Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7698DD7A2634510400F11A9A /* RegisterTests.swift */,
+			);
+			path = "Extra Tests";
+			sourceTree = "<group>";
+		};
 		76D0B0F026330244005A0FBD = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +135,10 @@
 		76D0B11526330249005A0FBD /* CognizantAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				76D0B11626330249005A0FBD /* CognizantAssignmentTests.swift */,
+				7698DD8A2634555C00F11A9A /* ViewControllers.swift */,
+				7698DD95263455FF00F11A9A /* RootViewController+Tests.swift */,
+				7698DD79263450D200F11A9A /* Extra Tests */,
+				76D0B16226333909005A0FBD /* Cases */,
 				76D0B11826330249005A0FBD /* Info.plist */,
 			);
 			path = CognizantAssignmentTests;
@@ -137,6 +156,7 @@
 		76D0B1322633068C005A0FBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76D0B15B263337FF005A0FBD /* RegisterErrors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +174,22 @@
 			children = (
 				76D0B10026330244005A0FBD /* HomeViewController.swift */,
 				76D0B1562633261B005A0FBD /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76D0B16226333909005A0FBD /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				76D0B16426333925005A0FBD /* Controller */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		76D0B16426333925005A0FBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76D0B16C263339C5005A0FBD /* RegisterViewControllerTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,6 +264,7 @@
 					};
 					76D0B11126330249005A0FBD = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = 76D0B0F826330244005A0FBD;
 					};
 					76D0B11C26330249005A0FBD = {
@@ -293,6 +330,7 @@
 				76D0B10126330244005A0FBD /* HomeViewController.swift in Sources */,
 				76D0B0FD26330244005A0FBD /* AppDelegate.swift in Sources */,
 				76D0B0FF26330244005A0FBD /* SceneDelegate.swift in Sources */,
+				76D0B15C263337FF005A0FBD /* RegisterErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +338,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D0B11726330249005A0FBD /* CognizantAssignmentTests.swift in Sources */,
+				7698DD7B2634510400F11A9A /* RegisterTests.swift in Sources */,
+				76D0B16D263339C5005A0FBD /* RegisterViewControllerTests.swift in Sources */,
+				7698DD96263455FF00F11A9A /* RootViewController+Tests.swift in Sources */,
+				7698DD8B2634555C00F11A9A /* ViewControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +547,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88XF5QGDBG;
 				INFOPLIST_FILE = CognizantAssignmentTests/Info.plist;
@@ -517,6 +559,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisAdewale.CognizantAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CognizantAssignmentTests/Cases/Controller/CognizantAssignmentTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CognizantAssignment.app/CognizantAssignment";
@@ -528,6 +572,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88XF5QGDBG;
 				INFOPLIST_FILE = CognizantAssignmentTests/Info.plist;
@@ -539,6 +584,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.FrancisAdewale.CognizantAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CognizantAssignmentTests/Cases/Controller/CognizantAssignmentTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CognizantAssignment.app/CognizantAssignment";

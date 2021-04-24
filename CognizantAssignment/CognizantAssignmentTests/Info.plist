@@ -18,5 +18,14 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>import UIKit
+@testable import FitNess
+
+func loadRootViewController() -&gt; RootViewController {
+  let window = UIApplication.shared.windows[0]
+  return window.rootViewController as! RootViewController
+}
+</string>
 </dict>
 </plist>

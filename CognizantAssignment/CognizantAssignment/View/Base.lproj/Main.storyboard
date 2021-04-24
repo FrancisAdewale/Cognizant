@@ -22,7 +22,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="13a-yn-aWa" kind="presentation" modalPresentationStyle="currentContext" id="alg-NT-5ja"/>
+                                    <segue destination="2PA-Ik-cw3" kind="show" id="rk7-q9-3bL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GU-ep-ev8">
@@ -48,7 +48,7 @@
         <!--Register View Controller-->
         <scene sceneID="7Ja-6B-MWH">
             <objects>
-                <viewController id="2PA-Ik-cw3" customClass="RegisterViewController" customModule="CognizantAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" id="2PA-Ik-cw3" customClass="RegisterViewController" customModule="CognizantAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fkv-92-H4a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,8 +78,8 @@
                         <viewLayoutGuide key="safeArea" id="EjS-FO-Qxv"/>
                         <color key="backgroundColor" red="0.58046871420000001" green="0.78708255289999995" blue="0.83194333310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9sB-hY-UWu">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="EpW-hD-Pyj"/>
+                    <navigationItem key="navigationItem" id="GNa-2W-8bf">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="7KK-4Y-nTt"/>
                     </navigationItem>
                     <connections>
                         <outlet property="passwordField" destination="BaQ-zJ-6Me" id="zmg-Xw-iMy"/>
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzi-MV-Dfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928.75" y="-551.4084507042254"/>
+            <point key="canvasLocation" x="2171" y="-460"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T2d-o9-WLD">
@@ -112,27 +112,6 @@
             </objects>
             <point key="canvasLocation" x="151.875" y="55.985915492957744"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Q4y-Nk-YX4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="13a-yn-aWa" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="QGY-lE-yae"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TaK-5K-yIA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2PA-Ik-cw3" kind="relationship" relationship="rootViewController" id="TdE-cz-aoR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="62q-3X-qnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1931.25" y="-551.4084507042254"/>
-        </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>

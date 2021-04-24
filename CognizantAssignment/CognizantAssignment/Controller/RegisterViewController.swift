@@ -25,10 +25,13 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    
 
     }
     
-    func setUpUsernameField() {
+    private func setUpUsernameField() {
         usernameField.clipsToBounds = true
         usernameField.layer.cornerRadius = 10.0
         usernameField.layer.borderColor = UIColor.gray.cgColor
@@ -36,7 +39,7 @@ class RegisterViewController: UIViewController {
         
     }
     
-    func setUpPasswordField() {
+    private func setUpPasswordField() {
         
         passwordField.clipsToBounds = true
         passwordField.layer.cornerRadius = 10.0
@@ -45,7 +48,7 @@ class RegisterViewController: UIViewController {
 
     }
     
-    func setUpRegisterButton() {
+    private func setUpRegisterButton() {
         
         registerButton.setTitle("DONE", for: .normal)
         registerButton.frame = CGRect(x: view.center.x, y: view.center.y, width: 180, height: 80)
@@ -60,5 +63,7 @@ class RegisterViewController: UIViewController {
         view.addSubview(registerButton)
         
     }
+    
+
     
 }
