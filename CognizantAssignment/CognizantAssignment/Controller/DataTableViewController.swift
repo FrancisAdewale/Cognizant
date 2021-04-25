@@ -109,7 +109,26 @@ class DataTableViewController: UITableViewController {
         return heroes
     }
 
-
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1.2
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.3568627451, green: 0.6078431373, blue: 0.8352941176, alpha: 1)
+        return view
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1.2
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.3568627451, green: 0.6078431373, blue: 0.8352941176, alpha: 1)
+        return view
+    
+    }
 
 }
 

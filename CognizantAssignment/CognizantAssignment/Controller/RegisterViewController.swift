@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController {
         super.viewWillDisappear(animated)
 
         //Revert to old colour, just this navigation bar
-        UINavigationBar.appearance().barTintColor = UIColor(red: 91.0, green: 155.0, blue: 213.0, alpha: 1.0)
+//        UINavigationBar.appearance().barTintColor = UIColor(red: 91.0, green: 155.0, blue: 213.0, alpha: 1.0)
         
 
     }
@@ -71,8 +71,8 @@ class RegisterViewController: UIViewController {
         registerButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         registerButton.setTitleColor(.white, for: .normal)
         registerButton.layer.cornerRadius = 10.0
-        registerButton.layer.borderColor = UIColor(red: 91.0, green: 155.0, blue: 213.0, alpha: 1.0).cgColor
-        registerButton.layer.borderWidth = 2.0
+        registerButton.layer.borderColor = #colorLiteral(red: 0, green: 0.2, blue: 0.631372549, alpha: 1)
+        registerButton.layer.borderWidth = 4.5
         registerButton.center = CGPoint(x: view.center.x, y: view.center.y + 150)
         view.addSubview(registerButton)
         
