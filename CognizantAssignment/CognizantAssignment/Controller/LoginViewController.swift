@@ -37,21 +37,14 @@ class LoginViewController: UIViewController {
         setUpUsernameField()
         setUpPasswordField()
         setUpLoginButton()
+        hideKeyboardWhenTappedAround()
+
         usernameField.delegate = self
         passwordField.delegate = self
 
-        
-    
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        //Revert to old colour, just this navigation bar
-//        UINavigationBar.appearance().barTintColor = UIColor(red: 91.0, green: 155.0, blue: 213.0, alpha: 1.0)
-
-
-    }
+ 
     
     private func setUpUsernameField() {
         
@@ -59,7 +52,7 @@ class LoginViewController: UIViewController {
         usernameField.layer.cornerRadius = 10
         usernameField.layer.borderWidth = 2.5
         usernameField.layer.borderColor = UIColor.gray.cgColor
-        usernameField.center = view.center
+        usernameField.center = CGPoint(x: view.center.x, y: view.center.y - 80)
     }
     
     private func setUpPasswordField() {
@@ -68,7 +61,7 @@ class LoginViewController: UIViewController {
         passwordField.layer.cornerRadius = 10
         passwordField.layer.borderWidth = 2.5
         passwordField.layer.borderColor = UIColor.gray.cgColor
-        passwordField.center = CGPoint(x: view.center.x, y: view.center.y + 50)
+        passwordField.center = CGPoint(x: view.center.x, y: view.center.y)
     }
     
     private func setUpLoginButton() {
@@ -102,7 +95,7 @@ class LoginViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         for e in users {
-            if e.password == passwordField.text! && e.username == usernameField.text {
+            if e.password == passwordField.text! && e.username == usernameField.text! {
                 return true
             }
         }
@@ -110,7 +103,15 @@ class LoginViewController: UIViewController {
         return false
     }
     
+    private func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     
 }

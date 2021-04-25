@@ -64,7 +64,6 @@
 		76D0B1562633261B005A0FBD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		76D0B15B263337FF005A0FBD /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		76D0B16C263339C5005A0FBD /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
-		76EAA17B2634810C00C34D01 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		76EAA17C2634819B00C34D01 /* X.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		764CAB2A2635AB1E00F457D6 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				76EAA17C2634819B00C34D01 /* X.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		765EE9E02635A45700B886A9 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				76D0B10526330244005A0FBD /* CognizantAssignment.xcdatamodeld */,
+				765EE9DB26359BCA00B886A9 /* UserManager.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		7698DD79263450D200F11A9A /* Extra Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,15 +140,13 @@
 		76D0B0FB26330244005A0FBD /* CognizantAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				76EAA17B2634810C00C34D01 /* data.json */,
-				76D0B15B263337FF005A0FBD /* RegisterErrors.swift */,
 				76D0B1322633068C005A0FBD /* Model */,
 				76D0B13326330696005A0FBD /* View */,
 				76D0B134263306A4005A0FBD /* Controller */,
 				76D0B0FC26330244005A0FBD /* AppDelegate.swift */,
+				76D0B10A26330249005A0FBD /* LaunchScreen.storyboard */,
 				76D0B0FE26330244005A0FBD /* SceneDelegate.swift */,
 				76D0B10826330249005A0FBD /* Assets.xcassets */,
-				76D0B10A26330249005A0FBD /* LaunchScreen.storyboard */,
 				76D0B10D26330249005A0FBD /* Info.plist */,
 			);
 			path = CognizantAssignment;
@@ -160,9 +174,9 @@
 		76D0B1322633068C005A0FBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				76D0B10526330244005A0FBD /* CognizantAssignment.xcdatamodeld */,
-				765EE9DB26359BCA00B886A9 /* UserManager.swift */,
-				76EAA17C2634819B00C34D01 /* X.swift */,
+				76D0B15B263337FF005A0FBD /* RegisterErrors.swift */,
+				765EE9E02635A45700B886A9 /* User */,
+				764CAB2A2635AB1E00F457D6 /* JSON */,
 			);
 			path = Model;
 			sourceTree = "<group>";

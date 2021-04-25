@@ -14,8 +14,6 @@ class RegisterViewController: UIViewController {
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
 
-
-    
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -34,25 +32,18 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         usernameField.delegate = self
         passwordField.delegate = self
-        
+        hideKeyboardWhenTappedAround()
+
 
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        //Revert to old colour, just this navigation bar
-//        UINavigationBar.appearance().barTintColor = UIColor(red: 91.0, green: 155.0, blue: 213.0, alpha: 1.0)
-        
-
-    }
     
     private func setUpUsernameField() {
         usernameField.clipsToBounds = true
         usernameField.layer.cornerRadius = 10
         usernameField.layer.borderWidth = 2.5
         usernameField.layer.borderColor = UIColor.gray.cgColor
-        usernameField.center = view.center
+        usernameField.center = CGPoint(x: view.center.x, y: view.center.y - 80)
         
     }
     
@@ -62,7 +53,7 @@ class RegisterViewController: UIViewController {
         passwordField.layer.cornerRadius = 10
         passwordField.layer.borderWidth = 2.5
         passwordField.layer.borderColor = UIColor.gray.cgColor
-        passwordField.center = CGPoint(x: view.center.x, y: view.center.y + 50)
+        passwordField.center = CGPoint(x: view.center.x, y: view.center.y)
 
     }
     
@@ -82,49 +73,35 @@ class RegisterViewController: UIViewController {
         
     }
     
-    
     @IBAction func donePressed(_ sender: UIButton) {
         
         let userEntity = User(context: context)
-
-        
         if let text = usernameField.text {
             if text.count > 10 {
                 do {
                     try throwUsernameTooLong()
                 } catch {
-        
                     print("\(error.localizedDescription) Username Too Long ")
-                    
                 }
             } else {
                 userEntity.username = text
-
             }
-            
 
         }
         
         if let passwordText = passwordField.text {
             if passwordText.count > 15 {
-                
                 do {
                     try throwPasswordtooLong()
                 } catch {
         
                     print("\(error.localizedDescription) Password Too Long")
-                    
                 }
                 
             } else {
                 userEntity.password = passwordText
-
             }
-
         }
-
-        
-    
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -177,6 +154,16 @@ class RegisterViewController: UIViewController {
             print("Could not save \(error)")
         }
     }
+    
+    private func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
 }
 
@@ -215,10 +202,6 @@ extension RegisterViewController: UITextFieldDelegate {
                 passwordField.layer.borderColor = UIColor.gray.cgColor
             }
         
-
         }
-
-
-    
-    
+  
 }

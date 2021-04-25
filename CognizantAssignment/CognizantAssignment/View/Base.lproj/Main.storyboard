@@ -41,7 +41,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lNe-f9-DHB"/>
-                        <color key="backgroundColor" red="0.35686274509803922" green="0.60784313725490191" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.49019607843137253" green="0.71372549019607845" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="5nX-kj-7hx"/>
                     <connections>
@@ -193,7 +193,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l3h-US-lYx"/>
-                        <color key="backgroundColor" red="0.35686274509803922" green="0.60784313725490191" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.49019607843137253" green="0.71372549019607845" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="St9-75-f4F">
                         <barButtonItem key="backBarButtonItem" title="Home" id="pvD-1F-fbm"/>
@@ -210,7 +210,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="f8P-BY-pNR"/>
+        <segue reference="BGy-75-in1"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
     <resources>

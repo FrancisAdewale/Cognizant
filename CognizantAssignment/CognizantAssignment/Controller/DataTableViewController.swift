@@ -10,6 +10,8 @@ import UIKit
 class DataTableViewController: UITableViewController {
     
     var heroes: [Heroes] = []
+    
+    let x = X()
   
     let data = """
     {
@@ -42,17 +44,12 @@ class DataTableViewController: UITableViewController {
 
 """
 
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.barStyle = .default
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.3568627451, green: 0.6078431373, blue: 0.8352941176, alpha: 1)
-
-
-        
-
 
     }
     
@@ -61,10 +58,7 @@ class DataTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = 71.0
 
-        self.heroes = parseJson(data)
-  
-        
-        
+        self.heroes = x.parseJson(data)
     }
 
     // MARK: - Table view data source
@@ -73,7 +67,6 @@ class DataTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return heroes.count
     }
-    
     
     //MARK: - Table view deletagte
     
@@ -86,28 +79,6 @@ class DataTableViewController: UITableViewController {
         return cell
     }
     
-    
-    func parseJson(_ jsonString: StringLiteralType) -> [Heroes] {
-        
-        
-        var heroes = [Heroes]()
-        
-        if let jsonData = jsonString.data(using: .utf8) {
-            
-            let decoder = JSONDecoder()
-            
-            let x = try! decoder.decode(X.self, from: jsonData)
-            
-            heroes = x.heroes
-            
-            
-//            print(heroes)
-
-
-        }
-        
-        return heroes
-    }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1.2
@@ -133,7 +104,6 @@ class DataTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-
     }
 
 }
