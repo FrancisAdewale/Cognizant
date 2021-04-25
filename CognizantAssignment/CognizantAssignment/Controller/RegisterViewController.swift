@@ -149,12 +149,21 @@ class RegisterViewController: UIViewController {
     
     func throwUsernameTooLong() throws {
         
+    
+        let ac = UIAlertController(title: "Username Too Long", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        ac.addAction(action)
+        present(ac, animated: true, completion: nil)
         throw RegisterError.tooLong
-        
   
     }
     
     func throwPasswordtooLong() throws {
+        
+        let ac = UIAlertController(title: "Password Too Long", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        ac.addAction(action)
+        present(ac, animated: true, completion: nil)
         
         throw RegisterError.tooLong
         

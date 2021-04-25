@@ -10,15 +10,13 @@ import CoreData
 
 class LoginViewController: UIViewController {
     
-  
-    
-    
+
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     private var users: [User] = []
     
-   
-
+    var usermanager = UserManager()
+    
 
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
@@ -93,14 +91,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
-        let fetch = NSFetchRequest<User>(entityName: "User")
-        do {
-            let request  = try context.fetch(fetch)
-            users = request
-        } catch {
-            print("Could not fetch \(error)")
+        if let users = usermanager.fetchUsers() {
+            self.users = users
         }
-        
        
 
     }
