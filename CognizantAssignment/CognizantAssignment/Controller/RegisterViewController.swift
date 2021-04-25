@@ -32,6 +32,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameField.delegate = self
+        passwordField.delegate = self
         
 
     }
@@ -47,7 +49,8 @@ class RegisterViewController: UIViewController {
     
     private func setUpUsernameField() {
         usernameField.clipsToBounds = true
-        usernameField.layer.cornerRadius = 10.0
+        usernameField.layer.cornerRadius = 10
+        usernameField.layer.borderWidth = 2.5
         usernameField.layer.borderColor = UIColor.gray.cgColor
         usernameField.center = view.center
         
@@ -56,8 +59,9 @@ class RegisterViewController: UIViewController {
     private func setUpPasswordField() {
         
         passwordField.clipsToBounds = true
-        passwordField.layer.cornerRadius = 10.0
-        usernameField.layer.borderColor = UIColor.gray.cgColor
+        passwordField.layer.cornerRadius = 10
+        passwordField.layer.borderWidth = 2.5
+        passwordField.layer.borderColor = UIColor.gray.cgColor
         passwordField.center = CGPoint(x: view.center.x, y: view.center.y + 50)
 
     }
@@ -165,4 +169,47 @@ class RegisterViewController: UIViewController {
         }
     }
 
+}
+
+
+extension RegisterViewController: UITextFieldDelegate {
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
+
+        
+        if usernameField.isHighlighted == true {
+            usernameField.clipsToBounds = true
+            usernameField.layer.cornerRadius = 10
+            usernameField.layer.borderWidth = 2.5
+            usernameField.layer.borderColor = #colorLiteral(red: 0, green: 0.2, blue: 0.631372549, alpha: 1)
+
+        } else if usernameField.isHighlighted == false {
+            
+            usernameField.clipsToBounds = true
+            usernameField.layer.cornerRadius = 10
+            usernameField.layer.borderWidth = 2.5
+            usernameField.layer.borderColor = UIColor.gray.cgColor
+            
+        }
+        
+        if passwordField.isHighlighted == true {
+            passwordField.clipsToBounds = true
+            passwordField.layer.cornerRadius = 10
+            passwordField.layer.borderWidth = 2.5
+            passwordField.layer.borderColor = #colorLiteral(red: 0, green: 0.2, blue: 0.631372549, alpha: 1)
+        } else if passwordField.isHighlighted == false {
+            
+                passwordField.clipsToBounds = true
+                passwordField.layer.cornerRadius = 10
+                passwordField.layer.borderWidth = 2.5
+                passwordField.layer.borderColor = UIColor.gray.cgColor
+            }
+        
+
+        }
+
+
+    
+    
 }
