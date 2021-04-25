@@ -33,8 +33,15 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        //Revert to old colour, just this navigation bar
+        UINavigationBar.appearance().barTintColor = UIColor(red: 91.0, green: 155.0, blue: 213.0, alpha: 1.0)
+        
 
     }
     

@@ -8,30 +8,32 @@
 import UIKit
 
 class DataTableViewController: UITableViewController {
+    
+    var heroes: [Heroes] = []
   
     let data = """
     {
         "heroes": [
             {
-            \"title\": \"Iron Man\"
+            "title": "Iron Man"
             },
             {
-            \"title\": \"Captain America\"
+            "title": "Captain America"
             },
             {
-            \"title\": \"Hulk\"
+            "title": "Hulk"
             },
             {
-            \"title\": \"Black Widow\"
+            "title": "Black Widow"
             },
             {
-            \"title\": \"Superman\"
+            "title": "Superman"
             },
             {
-            \"title\": \"Spiderman\"
+            "title": "Spiderman"
             },
             {
-            \"title\": \"Thor\"
+            "title": "Thor"
             }
 
         ]
@@ -44,52 +46,67 @@ class DataTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.tintColor = UIColor(red: 91.0, green: 155.0, blue: 213.0, alpha: 1.0) 
-     
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.barStyle = .default
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.3568627451, green: 0.6078431373, blue: 0.8352941176, alpha: 1)
+
+
+        
+
+
     }
     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        if let jsonData = data.data(using: .utf8) {
+        self.tableView.rowHeight = 71.0
+
+        self.heroes = parseJson(data)
+  
+        
+        
+    }
+
+    // MARK: - Table view data source
+
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return heroes.count
+    }
+    
+    
+    //MARK: - Table view deletagte
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel!.text = heroes[indexPath.row].title
+        cell.layer.borderWidth = 1.2
+        cell.layer.borderColor =  #colorLiteral(red: 0.3568627451, green: 0.6078431373, blue: 0.8352941176, alpha: 1)
+        
+        return cell
+    }
+    
+    
+    func parseJson(_ jsonString: StringLiteralType) -> [Heroes] {
+        
+        
+        var heroes = [Heroes]()
+        
+        if let jsonData = jsonString.data(using: .utf8) {
             
             let decoder = JSONDecoder()
             
             let x = try! decoder.decode(X.self, from: jsonData)
             
-            print(x.heroes.count)
+            heroes = x.heroes
+            
+            
+//            print(heroes)
 
-            
-            
-       
-            
+
         }
         
-        
-        //        if let data = try? Data(contentsOf: urlString!) {
-        //
-        //            print(data)
-//
-//        }
-
-    
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return heroes
     }
 
 
